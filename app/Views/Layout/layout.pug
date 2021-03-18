@@ -1,0 +1,40 @@
+include ../mixins/base
+
+html
+    head
+        title="Abitsafe -> " + title
+        meta(charset="utf-8")
+        link(href="/stylesheets/style.css" rel="stylesheet")
+        link(href="/assets/images/cowboy-hat.png" rel="icon")
+        script(src='/javascripts/vendor/jquery-3.5.1.min.js')
+        script(src='/javascripts/vendor/bootstrap-datepicker.js')
+        block script
+    body
+        nav.navbar.shadow.navbar-expand-md.navbar-light.fixed-top.header
+            a.navbar-brand(href='#')
+            div.row
+                div.col-2
+                    img(src='/assets/images/cowboy-hat.png' alt='' height=50 width=50)
+                div.col-10
+                    h3.title George Abit-safe
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarCollapse.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link(href='/index')
+                            | Home
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href='/password') Mots de passes
+                    li.nav-item
+                        a.nav-link(href='/creditcard') Carte de crédit
+                a(href="/deco"): button.btn.btn-lg.btn-danger Déconnexion
+        main.container(role='main')
+            block content
+        footer.footer.w-100
+            .row.footer-row
+                .col-4.text-center
+                .col-4
+                .col-4.text-center.pt-2.pb-2
+                    img(src="/assets/images/cowboy-hat.png")#footerLogo

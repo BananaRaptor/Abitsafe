@@ -1,0 +1,45 @@
+extends  Layout/layout
+block script
+    script(src='/javascripts/creditCard.js')
+
+block content
+    h2= title
+    br
+    br
+    h3 Vos cartes de crédits
+    div.row
+        div.col-6
+
+
+        div.col-6
+            div.float-right
+                button.Add.btn.btn-info.m-2(type='button' name='favorite')
+                    i.fa.fa-plus
+                button.favorite.btn.btn-info.m-2(type='button' name='favorite')
+                    i.fa.fa-star
+                button.detail.btn.btn-info.m-2(type='button' name='remove' )
+                    i.fa.fa-info
+                button.remove.btn.btn-danger.m-2(type='button' name='remove' )
+                    i.fa.fa-trash
+    br
+    table.table.table-striped.table-light.table-hover
+        thead.thead-light
+            tr
+                th(scope='col') Provider
+                th(scope='col') Carte de crédit
+                th(scope='col') Date D'Expiration
+                th(scope='col') status
+        tbody
+            each CreditCard in CreditCards
+                tr
+                    td
+                        h4=CreditCard.Provider
+                    td(hidden)= CreditCard.Id
+                    td= CreditCard.CreditCardNumber
+                    td= CreditCard.ExpirationDate
+                    if (CreditCard.isFavorite == 1)
+                        td
+                            i.fa.fa-star(aria-hidden='true')
+                    else
+                        td
+                            i.fa.fa-star-o(aria-hidden='true')

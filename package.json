@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express-validator": "^6.7.0",
+    "flash": "^1.1.0",
+    "forever": "^3.0.4",
+    "mongodb": "^3.6.3"
+  }
+}

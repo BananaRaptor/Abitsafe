@@ -1,0 +1,80 @@
+@import "vendor/bootstrap.min.css";
+@import "vendor/font-awesome.min.css";
+@import "vendor/bootstrap-datepicker.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Julius+Sans+One&family=Special+Elite&display=swap');
+
+/*font-family: 'Exo', sans-serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Special Elite', cursive;*/
+
+.selected {
+    background-color: #A8CCC9 !important;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+}
+h1 {
+    font-family: 'Special Elite', cursive;
+}
+
+h2,h2,h4 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.title {
+    font-family: 'Special Elite', cursive;
+    padding-top: 1rem;
+}
+
+.header {
+    background-color: #A8CCC9;
+}
+main.container {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    min-height: 46rem;
+
+}
+
+.footer-row {
+    margin-right: 0px;
+}
+
+
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #A8CCC9;
+}
+
+.copyright, .credits {
+    font-size: 14px;
+}
+
+#footerLogo {
+    width: 75px;
+}
+.table .thead-light th {
+    color: black;
+    background-color: #A8CCC9;
+    border-color: #dee2e6;
+}
+.ml-45 {
+    margin-left: 2.2rem !important;
+}
+
+.btn-info,
+.btn-info:hover,
+.btn-info:active,
+.btn-info:visited,
+.btn-info:focus {
+    background-color: #7277d1;
+    border-color: #858AE3;
+}
+
+
+
+

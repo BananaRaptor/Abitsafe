@@ -1,0 +1,42 @@
+extends  Layout/createUserLayout
+block content
+
+    +form("post","/createUser")
+        +flash()
+        .form-group
+            label
+                p.label-txt Nom d'utilisateur
+            br
+            input.input.form-control(type='text' name="username")
+            .line-box
+                .line
+        .form-group
+            label
+                p.label-txt Mot de passe
+            br
+            input.input.form-control(type='password' name="password")
+            .line-box
+                .line
+        .form-group
+            label
+                p.label-txt Email
+            br
+            input.input.form-control(type='text' name="email")
+            .line-box
+                .line
+        .form-group
+            label
+                p.label-txt Prénom
+            br
+            input.input.form-control(type='text' name="firstName")
+            .line-box
+                .line
+        .form-group
+            label
+                p.label-txt Nom de famille
+            br
+            input.input.form-control(type='text' name="lastName")
+            .line-box
+                .line
+
+        button(type='submit') submit

@@ -1,0 +1,30 @@
+extends  Layout/layout
+block script
+    script(src='/javascripts/addCreditCard.js')
+
+block content
+    h2= title
+    //+flash()
+    +form("post","/addCreditcard")
+        .form-group
+            label
+                p.label-txt Le numéro de la carte de crédit
+            input#password.input.form-control(type='text' name="number")
+            .line-box
+                .line
+        .form-group
+            label
+                p.label-txt date d'expiration
+            input.form-control.datepicker(type='text' name='dateExp')
+            .line-box
+                .line
+        .form-group
+            label
+                p.label-txt Cvc (voir à l'endos de votre carte)
+            input.input.form-control(type='text' name="cvc")
+            .line-box
+                .line
+        div.row
+            div.col-10
+            div.col-2
+                button.btn.btn-lg.btn-info.ml-45(type='submit') Confirmer

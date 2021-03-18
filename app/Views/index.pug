@@ -1,0 +1,37 @@
+extends  Layout/layout
+block script
+    script(src='/javascripts/index.js')
+block content
+    h2= title
+    br
+    h3= "Vos mots de passes favoris"
+    br
+    table.table.table-striped.table-light.table-hover
+        thead.thead-light
+            tr
+                th(scope='col') Mots de passes
+                th(scope='col') Lien
+        tbody
+            each password in passwords
+                tr
+                    td(hidden="")
+                        input(value = password.passwordtext).password
+                    td= password.passwordtext
+                    td= password.url
+    br
+    br
+    h3= "Vos cartes de crédits favorites"
+    br
+    table.table.table-striped.table-light.table-hover
+        thead.thead-light
+            tr
+                th(scope='col') Provider
+                th(scope='col') Carte de crédit
+                th(scope='col') Date D'Expiration
+        tbody
+            each CreditCard in CreditCards
+                tr
+                    td
+                        h4=CreditCard.Provider
+                    td= CreditCard.CreditCardNumber
+                    td= CreditCard.ExpirationDate

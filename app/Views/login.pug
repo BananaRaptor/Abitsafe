@@ -1,0 +1,27 @@
+extends  Layout/loginLayout
+link(href="/stylesheets/login.css" rel="stylesheet")
+block content
+    .backgroundGrid
+        video.myVideo(autoplay muted loop)
+            source(src="/assets/videos/horse.mp4" type="video/mp4")
+
+    .wrapper.fadeInDown(style="padding: 0px; overflow")
+        #formContent
+            .fadeIn.first
+                br
+                br
+                img(src='/assets/images/cowboy-hat.png' alt='' height=50 width=50)
+            +flash
+            +form("post","/login")
+                br
+                .form-group
+                    label Nom d'utilisateur
+                    input#login.fadeIn.second.form-control(type="text" name="username" placeholder="Bruce.Wayne")
+                .form-group
+                    label Mots de passes
+                    input#password.fadeIn.third.form-control(type="password" name="password" placeholder="password")
+                .text-right
+                    input.fadeIn.fourth#confirm(type='submit' value='Log In')
+
+            #formFooter
+                a.underlineHover(href='/createUser') Create User
